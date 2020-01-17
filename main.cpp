@@ -14,8 +14,8 @@ float clamp(float v, float a, float b)
 void draw(float target, float current)
 {
 	const int range = 100;
-	int indexTarget = range * (target + 1.0f) * 0.5f;
-	int indexCurrent = range * (current + 1.0f) * 0.5f;
+	int indexTarget = (int)(range * (target + 1.0f) * 0.5f);
+	int indexCurrent = (int)(range * (current + 1.0f) * 0.5f);
 	for (int i = 0; i <= range; ++i)
 	{
 		if (indexTarget == indexCurrent && indexTarget == i)
