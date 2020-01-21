@@ -62,9 +62,9 @@ int main()
 		draw(target, current);
 
 		const float delta = current - target;
-		const float dampMult = 4.0f - clamp(std::abs(delta), 0.1f, 1.0f);
+		const float dampMult = 7.5f;
 		const float dampForce = -dampMult * velocity;
-		const float k = 25.0f;
+		const float k = 50.0f;
 		const float pullForce = -k * delta + dampForce;
 		velocity += pullForce * deltaTime;
 		current += velocity * deltaTime;
